@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.android.superuser" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727">
+    <permission android:name="android.permission.REQUEST_SUPERUSER" android:protectionLevel="signature"/>
+    <permission android:name="android.permission.REPORT_SUPERUSER" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <application android:allowBackup="false" android:allowClearUserData="false" android:debuggable="true" android:icon="@drawable/ic_launcher" android:label="@string/superuser" android:name="com.koushikdutta.superuser.SuApplication" android:theme="@style/Superuser">
+        <activity android:label="@string/superuser" android:name="com.koushikdutta.superuser.MainActivity" android:theme="@style/SuperuserActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:label="@string/superuser" android:launchMode="singleTask" android:name="com.koushikdutta.superuser.RequestActivity" android:permission="android.permission.REQUEST_SUPERUSER" android:process=":superuser" android:taskAffinity="internal.superuser" android:theme="@style/RequestTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:label="@string/superuser" android:launchMode="singleTask" android:name="com.koushikdutta.superuser.NotifyActivity" android:permission="android.permission.REQUEST_SUPERUSER" android:process=":superuser" android:taskAffinity="internal.superuser" android:theme="@style/RequestTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:label="@string/request" android:name="com.koushikdutta.superuser.MultitaskSuRequestActivity" android:process=":superuser" android:taskAffinity="internal.superuser" android:theme="@style/RequestTheme"/>
+        <receiver android:name="com.koushikdutta.superuser.SuReceiver" android:permission="android.permission.REPORT_SUPERUSER"/>
+        <receiver android:name="com.koushikdutta.superuser.SuCheckerReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.koushikdutta.superuser.PackageChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

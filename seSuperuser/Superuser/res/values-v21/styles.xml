@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBaseDarkTheme" parent="@style/AndroidDarkTheme">
+        <item name="listContentHeader">?android:listSeparatorTextViewStyle</item>
+        <item name="listHeaderTextColor">@null</item>
+        <item name="listPreferredItemPaddingLeft">?android:listPreferredItemPaddingLeft</item>
+        <item name="listPreferredItemPaddingRight">?android:listPreferredItemPaddingRight</item>
+    </style>
+    <style name="AppBaseTheme" parent="@style/AndroidTheme">
+        <item name="listContentHeader">?android:listSeparatorTextViewStyle</item>
+        <item name="listHeaderTextColor">@color/holo_blue_dark</item>
+        <item name="listPreferredItemPaddingLeft">?android:listPreferredItemPaddingLeft</item>
+        <item name="listPreferredItemPaddingRight">?android:listPreferredItemPaddingRight</item>
+    </style>
+    <style name="AndroidDarkTheme" parent="@android:style/Theme.Material">
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+    </style>
+    <style name="AndroidTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+    </style>
+    <style name="ListItemSummary" parent="@android:style/TextAppearance.Small" />
+    <style name="ListItemTitle" parent="@android:style/TextAppearance.Medium" />
+    <style name="SuperuserLight" parent="@style/AppTheme">
+        <item name="android:colorPrimary">@color/holo_blue_light</item>
+        <item name="android:colorPrimaryDark">@color/holo_blue_dark</item>
+        <item name="android:colorAccent">@color/holo_blue_bright</item>
+        <item name="automaticResponseIcon">@drawable/ic_alert</item>
+        <item name="bottomButtonBar">@color/holo_blue_dark</item>
+        <item name="bottomButtonBarText">?android:textColorPrimaryInverse</item>
+        <item name="largeIconTheme">@style/Superuser.LargeIcon</item>
+        <item name="loggingIcon">@drawable/ic_logging</item>
+        <item name="multiuserIcon">@drawable/ic_users</item>
+        <item name="notificationsIcon">@drawable/ic_notifications</item>
+        <item name="pinProtectionIcon">@drawable/ic_protected</item>
+        <item name="requestTimeoutIcon">@drawable/ic_timeout</item>
+        <item name="themeIcon">@drawable/ic_theme</item>
+        <item name="toggleIcon">@drawable/ic_toggle</item>
+    </style>
+    <style name="RobotoButtonStyle" parent="@android:style/Widget.Material.Button">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <style name="RobotoTextViewStyle" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+</resources>
