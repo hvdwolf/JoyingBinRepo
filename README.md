@@ -1,5 +1,5 @@
 # JoyingBinRepo
-Contains binaries, mods, rooting stuff for the Joying Sofia and PX5 FYT units.
+Contains binaries, mods, rooting stuff for the Joying Sofia 3GR, PX5 FYT units and new Intel Airmont sp9853i FYT units.
 
 Apart from the rooting scripts, everything is meant to be used from within the JET apk (Joying Extra Tools apk). For info on the use of that apk, visit the [Website](https://hvdwolf.github.io/Joying-RootAssistant/).<br>
 For the JET apk releases go to the [Releases](https://github.com/hvdwolf/Joying-RootAssistant/releases/) page.
